@@ -26,8 +26,12 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-import Product from './components/Product.vue';
+import Product from './components/Product';
+import Orderstable from './components/Orderstable';
+import Createordertable from './components/Createordertable'
+import Editorder from './components/Editorder'
+
 const app = new Vue({
     el: '#app',
-    components:{Product}
+    components:{Product, Orderstable, Createordertable, Editorder}
 });

@@ -17,4 +17,7 @@ Route::post('/updateproduct/{productid}', [ProductsController::class, 'update'])
 
 //Orders routers
 Route::get('/orders', [OrdersController::class, 'index']);
-
+Route::get('/createorder', [OrdersController::class, 'create']);
+Route::post('/addorder', [OrdersController::class, 'store'])->name('addorder');
+Route::get('/editorder/{orderId}', [OrdersController::class, 'edit']);
+Route::patch('/updateorder/{orderId}', [OrdersController::class, 'update']);

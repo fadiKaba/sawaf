@@ -17,9 +17,9 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->dateTime('OrderDate');
-            $table->string('OrderNumber', 10);
+            $table->string('OrderNumber', 10)->nullable();
             $table->unsignedBigInteger('CustomerId');
-            $table->decimal(12, 2);
+            $table->decimal('TotalAmount',12, 2);
             $table->foreign('CustomerId')->references('id')->on('customers')->onDelete('cascade');
         });
     }

@@ -23,6 +23,26 @@ class CreateCustomersTable extends Migration
             $table->string('Phone', 20);
 
         });
+
+        DB::table('customers')->insert(
+            array(
+                'FirstName' => 'Mohamad',
+                'LastName' => 'Zid',
+                'City' => 'Beirut',
+                'Country' => 'Lebanon',
+                'Phone' => '02015485546',
+            )
+        );
+
+        DB::table('customers')->insert(
+            array(
+                'FirstName' => 'Samer',
+                'LastName' => 'Salam',
+                'City' => 'Damascus',
+                'Country' => 'Syria',
+                'Phone' => '555456687',
+            )
+        );
     }
 
     /**

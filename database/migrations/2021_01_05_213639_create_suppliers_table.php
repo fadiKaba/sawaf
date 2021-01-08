@@ -20,9 +20,31 @@ class CreateSuppliersTable extends Migration
             $table->string('ContactName', 50);
             $table->string('City', 40);
             $table->string('Country', 40);
-            $table->string('Phone', 30);
-            $table->string('Fax', 30);
+            $table->string('Phone', 30)->nullable();
+            $table->string('Fax', 30)->nullable();
         });
+
+        DB::table('suppliers')->insert(
+            array(
+                'CompanyName' => 'SwafTech',
+                'ContactName' => 'Ahmad',
+                'City' => 'Damascus',
+                'Country' => 'Syria',
+                'Phone' => '33324587',
+                'Fax' => '33324588',
+            )
+        );
+
+        DB::table('suppliers')->insert(
+            array(
+                'CompanyName' => 'Durra',
+                'ContactName' => 'سعيد',
+                'City' => 'دمشق',
+                'Country' => 'سوريا',
+                'Phone' => '0113855454',
+                'Fax' => '33324588',
+            )
+        );
     }
 
     /**

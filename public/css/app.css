@@ -10903,3 +10903,17 @@ a.text-dark:focus {
   }
 }
 
+.orders-container {
+  max-height: 70%;
+  overflow-y: scroll;
+}
+
+.pfooter {
+  background-color: #d6d6d6;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+

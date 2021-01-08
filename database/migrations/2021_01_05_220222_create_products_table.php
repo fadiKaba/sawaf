@@ -21,6 +21,28 @@ class CreateProductsTable extends Migration
             $table->decimal('UnitPrice', 12, 2)->default(0);
             $table->foreign('SupplierId')->references('id')->on('suppliers')->onDelete('cascade');
         });
+
+        DB::table('products')->insert(
+            array(
+                'ProductName' => 'Chai',
+                'SupplierId' => '1',
+                'UnitPrice' => '45',
+            )
+        );
+        DB::table('products')->insert(
+            array(
+                'ProductName' => 'Rice',
+                'SupplierId' => '1',
+                'UnitPrice' => '555',
+            )
+        );
+        DB::table('products')->insert(
+            array(
+                'ProductName' => 'Sugar',
+                'SupplierId' => '2',
+                'UnitPrice' => '770',
+            )
+        );
     }
 
     /**
